@@ -1,3 +1,4 @@
+import 'package:ecommerce_food_app2/core/helper_functions/on_generate_routes.dart';
 import 'package:ecommerce_food_app2/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,10 @@ class FruitsHub extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SplashView(), debugShowCheckedModeBanner: false);
+    return MaterialApp(
+      onGenerateRoute: onGenerateRoute,
+      debugShowCheckedModeBanner: false,
+      initialRoute: SplashView.routeName,
+    );
   }
 }
